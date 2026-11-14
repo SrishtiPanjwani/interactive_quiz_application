@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An interactive multiple-choice quiz application.">
+  <title>Code With AI Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <p class="eyebrow">LEARN • THINK • TEST</p>
+      <h1>Code With AI Quiz</h1>
+      <p class="subtitle">Test your understanding of AI and software development.</p>
+    </header>
+
+    <section class="quiz-card" aria-labelledby="question">
+      <div class="quiz-topline">
+        <span id="questionCounter">Question 1 of 5</span>
+        <span id="progressPercent">20%</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Quiz progress"
+           aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" id="progressTrack">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <h2 id="question">Loading question...</h2>
+      <div id="options" class="options" aria-label="Answer options"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+      <button id="nextButton" class="next-button" type="button" disabled>Next question</button>
+    </section>
+
+    <section id="resultCard" class="result-card" hidden aria-live="polite">
+      <p class="eyebrow">QUIZ COMPLETED</p>
+      <div class="result-icon" aria-hidden="true">★</div>
+      <h2>Your final score</h2>
+      <p id="finalScore" class="final-score">0 / 5</p>
+      <p id="resultMessage" class="result-message"></p>
+      <button id="restartButton" class="next-button" type="button">Try again</button>
+    </section>
+
+    <footer class="page-footer">Keep learning. Keep building.</footer>
+  </main>
+</body>
+</html>
